@@ -7,18 +7,9 @@
     <link rel="preload" href="fonts/lato-regular.woff2" as="font" type="font/woff2" crossorigin> <!--Добавил предзагрузку шрифтов-->
     <link rel="preload" href="fonts/lato-bold.woff2" as="font" type="font/woff2" crossorigin>
     
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const createLink = url => {
-          const link = document.createElement('link');
-          link.rel = 'stylesheet';
-          link.href = url;
-          document.head.append(link);
-        };
-        createLink('css/index.min.css');
-      })
-    </script>
+    <link rel="stylesheet" href="css/index.min.css">
     <script type="module" src="js/index.min.js"></script>
+
     <title>Онлайн магазин ShopOnline</title>
 </head>
   
@@ -28,7 +19,7 @@
   <header class="header">
     <div class="container header__container">
       <h1 class="header__title visually-hidden">Главная страница онлайн магазина ShopOnline</h1>
-      <img class="header__logo" src="./img/logo.png" alt="Логотип онлайн магазина" width="190" height="41" loading="lazy">
+      <img class="header__logo" src="img/logo.png" alt="Логотип онлайн магазина">
       <button class="header__menu btn" aria-haspopup="true" aria-expanded="false">
         <span class="header__menu-text">Меню</span>
       </button>
@@ -127,88 +118,104 @@
     </div>
   </div>
 
-  <section class="hero">
-    <div class="container hero__container">
-      <div class="hero__wrap" tabindex="0">
-        <h2 class="hero__title visually-hidden">Действующая промо-акция магазина</h2>
-        <p class="hero__promo-text">-50% на все ноутбуки</p>
-        <p class="hero__promo-time-end">До конца акции:</p>
-        <div class="hero__promo-timer timer" data-deadline="2023/10/25 13:36">
-          <p class="hero__promo-time timer-day-txt"><span class="hero__promo-number timer-day">3</span> Дней</p>
-          <p class="hero__promo-time timer-hour-txt"><span class="hero__promo-number timer-hour">8</span> Часов</p>
-          <p class="hero__promo-time timer-min-txt"><span class="hero__promo-number timer-min">43</span> Минут</p>
+  <section class="page-hero">
+    <div class="container page-hero__container" tabindex="0">
+
+      <ul class="page__breadcrumb breadcrumb">
+        <li class="breadcrumb__item">
+          <a class="breadcrumb__link" href="./index.html">Главная</a>
+        </li>
+        <li class="breadcrumb__item">
+          <a class="breadcrumb__link" href="#catalog-menu">Каталог</a>
+        </li>
+        <li class="breadcrumb__item">
+          <a class="breadcrumb__link" href="#">Ноутбуки</a>
+        </li>
+        <li class="breadcrumb__item">
+          <a class="breadcrumb__link" href="#">ASUS</a>
+        </li>
+      </ul>
+
+      <h2 class="page-hero__title">15.6" Игровой ноутбук ASUS G513IE-HN004T</h2>
+      <div class="page-hero__wrap" >
+        <div class="page-hero__img-wrap">
+          <img class="page-hero__img" src="./img/pc_page-hero.png" alt="Ноутбук в открытом виде" srcset="" width="757px" height="427px">
+        </div>
+        <div class="page-hero__price-container">
+          <div class="page-hero__price-wrap">
+            <p class="page-hero__price">109 090 ₽</p>
+            <a href="#" class="page-hero__creditlink">В кредит от 5600 ₽</a>
+            <div class="page-hero__btn-wrap">
+              <button class="page-hero__btn-add btn">Добавить в корзину</button>
+              <button class="page-hero__btn-favorite">
+                <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="currentColor">
+                  <path d="M22.6875 4.125C20.295 4.125 17.9987 5.23875 16.5 6.99875C15.0012 5.23875 12.705 4.125 10.3125 4.125C6.0775 4.125 2.75 7.4525 2.75 11.6875C2.75 16.885 7.425 21.12 14.5062 27.555L16.5 29.3563L18.4937 27.5413C25.575 21.12 30.25 16.885 30.25 11.6875C30.25 7.4525 26.9225 4.125 22.6875 4.125ZM16.6375 25.5062L16.5 25.6437L16.3625 25.5062C9.8175 19.58 5.5 15.6613 5.5 11.6875C5.5 8.9375 7.5625 6.875 10.3125 6.875C12.43 6.875 14.4925 8.23625 15.2212 10.12H17.7925C18.5075 8.23625 20.57 6.875 22.6875 6.875C25.4375 6.875 27.5 8.9375 27.5 11.6875C27.5 15.6613 23.1825 19.58 16.6375 25.5062Z"/>
+                  <defs>
+                    <rect width="33" height="33" fill="white"/>
+                  </defs>
+                </svg>
+              </button>
+            </div>
+  
+            <div class="page-hero__info-delivery-wrap">
+              <div class="page-hero__delivery-wrap">
+                <p class="page-hero__delivery-text delivery-text">Доставка</p>
+                <p class="page-hero__delivery-date delivery-info">1-3 января</p>
+              </div>
+              <div class="page-hero__seller-wrap">
+                <p class="page-hero__seller-text delivery-text">Продавец</p>
+                <p class="page-hero__seller-info delivery-info">ShopOnline</p>
+              </div>
+            </div>
+  
+              <button class="page-hero__btn-lowprice">Узнать о снижении цены</button>
+  
+          </div>
         </div>
       </div>
+      <h3 class="page-hero__description-title">Описание:</h3>
+      <p class="page-hero__description">
+        ROG Strix G15/17&nbsp;&mdash; это игровая платформа для массового пользователя, работающая на&nbsp;базе операционной системы Windows 10 Pro. Благодаря мощной конфигурации, которая может включать в&nbsp;себя процессор AMD Ryzen 9&nbsp;5900HX и&nbsp;видеокарту GeForce RTX 3070, этот ноутбук подходит для широкого спектра задач. Его дисплей доступен в&nbsp;двух вариантах: с&nbsp;киберспортивного уровня частотой обновления в&nbsp;300 Гц&nbsp;или с&nbsp;высоким разрешением WQHD. Оба варианта обладают низким временем отклика (3&nbsp;мс) и&nbsp;поддерживают адаптивную синхронизацию Adaptive-Sync. Оптимизированная система охлаждения гарантирует стабильную работу устройства под тяжелыми нагрузками, поэтому ROG Strix G15/17 позволит вам проявить все свое мастерство в&nbsp;любой игровой ситуации!
+      </p>
     </div>
   </section>
 
 <main>
-  <section class="goods">
+  <section class="page-sale">
     <div class="container">
-      <h2 class="goods__title visually-hidden">Товары и промоакции интеренет-магазина</h2>
-      <ul class="goods__list" aria-label="Посмотреть все предложения интернета магазина">
-        <li class="goods__item goods__item_1" aria-label="Товары раздела 'Книги'">
-          <a class = "goods__link goods__link_1" href="#" aria-label="Перейти к товарам раздела 'Книги'">
-            <p class="goods__text goods__text_fz30 goods__text_bottom-20px">Книга – <br> <span class="goods__text-span">лучший подарок</span></p>
+      <h2 class="page-sale__title">Рекомендуем также</h2>
+      <ul class="page-sale__list" aria-label="Посмотреть все скидки">
+        <li class="page-sale__img page-card  page-card_1">
+          <a class = "page-card__link" href="#" aria-label="Перейти к товару">
+            <img class = "page-card__image" src="./img/pc-1.png" alt="Ноутбук Dell">
+            <p class="page-card__price page-card__price_1">96 320 ₽</p>
+            <p class="page-card__text">Ноутбук Dell</p>
           </a>
         </li>
-        <li class="goods__item goods__item_2" aria-label="Товары со скидкой">
-          <a class = "goods__link goods__link_2" href="#" aria-label="Перейти к товарам со скидкой">
-            <p class="goods__text goods__text_fz30">Время скидок!</p>
+        <li class="page-sale__img page-card page-card_2">
+          <a class = "page-card__link" href="#" aria-label="Перейти к товару">
+            <img class = "page-card__image" src="./img/pc-2.png" alt="Ноутбук HP 250">
+            <p class="page-card__price page-card__price_2">64 949 ₽</p>
+            <p class="page-card__text">Ноутбук HP 250</p>
           </a>
         </li>
-        <li class="goods__item goods__item_3" aria-label="Товары раздела 'Обувь'">
-          <a class = "goods__link goods__link_3" href="#" aria-label="Перейти к товарам раздела 'Обувь'"></a>
-        </li>
-        <li class="goods__item goods__item_4" aria-label="Товары раздела 'Обувь', участвующих в акции 'Вторая обувь в подарок'">
-          <a class = "goods__link goods__link_4" href="#" aria-label="Перейти к товарам раздела 'Обувь', участвующих в акции">
-            <div class="goods__text-wrapper">
-              <p class="goods__text goods__text_blue">
-                Вторая пара кроссовок <span class="goods__text-span goods__text-span_bold-blue">в подарок!</span>
-              </p>
-            </div>
+        <li class="sale__img page-card page-card_3">
+          <a class = "page-card__link" href="#" aria-label="Перейти к товару">
+            <img class = "page-card__image" src="./img/pc-3.png" alt="Ноутбук HP 15">
+            <p class="page-card__price page-card__price_3">37 980 ₽</p>
+            <p class="page-card__text">Ноутбук HP 15</p>
           </a>
         </li>
-
-        <li class="goods__item goods__item_5" aria-label="Товары раздела 'Новогодние подарки'">
-          <a class = "goods__link goods__link_5" href="#" aria-label="Перейти к товарам раздела 'Новогодние подарки'">
-            <p class="goods__text goods__text_bottom-30px">Идеи новогодних подарков</p>
+        <li class="page-sale__img page-card page-card_4">
+          <a class = "page-card__link" href="#" aria-label="Перейти к товару">
+            <img class = "page-card__image" src="./img/pc-4.png" alt="Ноутбук ASUS ZenBook Pro">
+            <p class="page-card__price page-card__price_4">102 680 ₽</p>
+            <p class="page-card__text">Ноутбук ASUS ZenBook Pro</p>
           </a>
         </li>
-
-        <li class="goods__item goods__item_6" aria-label="Сезонные скидки на товары">
-          <a class = "goods__link goods__link_6" href="#" aria-label="Перейти к сезонным скидкам на товары">
-            <p class="goods__text goods__text_bottom-30px">Выгодно в декабре!</p>
-          </a>
-        </li>
-        <li class="goods__item goods__item_7" aria-label="Новогодние украшения">
-          <a class = "goods__link goods__link_7" href="#" aria-label="Перейти к товарам 'Новогодние украшения'">
-            <div class="goods__text-wrap">
-              <p class="goods__text goods__text_red">Новогодние украшения</p>
-            </div>
-          </a>
-        </li>
-        <li class="goods__item goods__item_8" aria-label="Товары раздела 'Одежда'">
-          <a class = "goods__link goods__link_8" href="#" aria-label="Перейти к товарам раздела 'Одежда'"></a>
-        </li>
-
-          <li class="goods__item goods__item_9" aria-label="Товары раздела 'Бытовая химия'">
-            <a class = "goods__link goods__link_9" href="#" aria-label="Перейти к товарам раздела 'Бытовая химия'">
-              <p class="goods__text goods__text_fz30 goods__text_bottom-20px">На бытовую химию</p>
-            </a>
-          </li>
-          <li class="goods__item goods__item_10" aria-label="Товары к новому году">
-            <a class = "goods__link goods__link_10" href="#" aria-label="Перейти к товарам к новому году"></a>
-          </li>
-
       </ul>
-    </div>
-  </section>
 
-  <section class="sale">
-    <div class="container">
-      <h2 class="sale__title">Это выгодно!</h2>
-      <ul class="sale__list" aria-label="Посмотреть все скидки">
+      <ul class="sale__list sale__list_none" aria-label="Посмотреть все скидки">
         <li class="sale__img card  card_1">
           <a class = "card__link" href="#" aria-label="Перейти к товару">
             <picture>
@@ -306,20 +313,20 @@
   <div class="container footer__container">
     <h2 class="footer__title visually-hidden">Подвал сайта интернет-магазина</h2>
     
-    <div class="footer__container-wrap container-wrap">
+    <div class="footer__container-wrap">
       <div class="footer__logo-wrap">
-        <img class="footer__logo" src="img/logo-footer.png" alt="Логотип онлайн магазина" width="190" height="41" loading="lazy">
+        <img class="footer__logo" src="img/logo-footer.png" alt="Логотип онлайн магазина">
       </div>
 
-      <div class="footer__catalog-wrap catalog-wrap">
-        <h3 class="footer__catalog-title footer-paragrath catalog-title" tabindex="0">Каталог</h3>
+      <div class="footer__catalog-wrap">
+        <h3 class="footer__catalog-title footer-paragrath" tabindex="0">Каталог</h3>
         <ul class="footer__catalog catalog" id="footer-catalog">
           <li class="catalog__item">
             <a href="#" aria-label="Смартфоны">Смартфоны</a></li>
           <li class="catalog__item">
             <a href="#" aria-label="Бытовая химия">Бытовая химия</a></li>
           <li class="catalog__item">
-            <a href="./page.html" aria-label="Ноутбуки">Ноутбуки</a></li>
+            <a href="#" aria-label="Ноутбуки">Ноутбуки</a></li>
           <li class="catalog__item">
             <a href="#" aria-label="Книги и журнал">Книги и журналы</a></li>
           <li class="catalog__item">
@@ -337,8 +344,8 @@
         </ul>
       </div>
 
-      <div class="footer__byer-info-wrap byer-info-wrap">
-        <h3 class="footer__byer-info-title footer-paragrath catalog-title" tabindex="0">Покупателям</h3>
+      <div class="footer__byer-info-wrap">
+        <h3 class="footer__byer-info-title footer-paragrath" tabindex="0">Покупателям</h3>
         <ul class="footer__byer-info byer-info">
           <li class="byer-info__item">
             <a href="#" aria-label="Оплата заказа">Оплата заказа</a></li>
@@ -351,8 +358,8 @@
         </ul>
       </div>
 
-      <div class="footer__contacts-wrap contacts-wrap">
-        <h3 class="footer__contacts-title footer-paragrath catalog-title" tabindex="0">Контакты</h3>
+      <div class="footer__contacts-wrap">
+        <h3 class="footer__contacts-title footer-paragrath" tabindex="0">Контакты</h3>
         <a class="footer__contacts-tel text-small" href="tel:+79378392361">Тел: +7 937 839 23-61</a> 
         <a class="footer__contacts-mail text-small" href="mailto:OnlineShop@gmail.com">Email: OnlineShop@gmail.com</a>
   

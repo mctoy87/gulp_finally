@@ -1,0 +1,43 @@
+.modal {
+  color:#000000;
+  font-size: 22px;
+  line-height: 150%;
+  padding: 50px 0;
+
+  @media (max-width: 780px){
+    font-size: 16px;
+  }
+
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &_none {
+    display: none;
+  }
+
+  &__catalog {
+    @media (min-width: 1280px){
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: 33px;
+      gap: 20px 60px;
+    }
+  }
+
+  &__contacts-wrap {
+    flex-basis: 300px;
+    @media (max-width: 1024px){
+      flex-basis: auto;
+    }
+  }
+
+  &-paragrath {
+    margin-bottom: 33px;
+    font-size: 38px;
+    line-height: 130%;
+  }
+}
+

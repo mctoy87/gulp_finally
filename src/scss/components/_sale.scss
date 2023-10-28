@@ -1,0 +1,281 @@
+.sale {
+  padding-top: 50px;
+  padding-bottom: 140px;
+  color: $color-primary;
+
+  &__title {
+    font-size: 50px;
+    line-height: 130%; /* 65px */
+    margin-bottom: 50px;
+  }
+  
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 50px 30px;
+
+
+    @media(max-width: 1024px) {
+      justify-content: flex-start;
+      gap: 50px 20px;
+    }
+
+    @media(max-width: 780px) {
+      gap: 40px 20px;
+    }
+
+    @media(max-width: 480px) {
+      gap: 30px 10px;
+    }
+
+    // для page-list - дубликат блока
+    &_none {
+      display: none;
+
+      @media(max-width: 1280px) {
+        display: flex;
+      }
+    }
+
+  }
+}
+
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 420px;
+  position: relative;
+
+  @media(max-width: 1280px) {
+    flex-basis: 300px;
+  }
+
+  @media(max-width: 780px) {
+    flex-basis: 220px;
+  }
+
+  @media(max-width: 480px) {
+    flex-basis: 130px;
+  }
+
+  &:before {
+    @extend %discountLabel;
+  
+    color: $text-color;
+  
+    top: 187px;
+    left: 20px;
+  
+    width: 88px;
+    height: 88px;
+
+
+    @media(max-width: 1280px) {
+      top: 100px;
+    }
+
+    @media(max-width: 780px) {
+      width: 60px;
+      height: 60px;
+      font-size: 20px;
+      top: 80px;
+    }
+
+    @media(max-width: 480px) {
+      width: 40px;
+      height: 40px;
+      font-size: 12px;
+      top: 40px;
+      left: 5px;
+    }
+  }
+
+  &_1:before {
+    content: "-50%";
+  }
+  
+  &_2:before {
+    content: "-40%";
+  }
+  
+  &_3:before {
+    content: "-10%";
+  }
+  
+  &_4:before {
+    content: "-30%";
+  }
+  
+  &_5:before {
+    content: "-30%";
+  }
+
+  &__image {
+    margin-bottom: 20px;
+
+    @media(max-width: 780px) {
+      margin-bottom: 15px;
+    }
+  }
+  
+  &__price {
+    position: relative;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 15px;
+
+    @media(max-width: 780px) {
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    @media(max-width: 480px) {
+      font-size: 16px;
+    }
+
+    &_1:after {
+      content: '2598 ₽';
+    }
+    
+    &_2:after {
+      content: '5938 ₽';
+    }
+    
+    &_3:after {
+      content: '4490 ₽';
+    }
+    
+    &_4:after {
+      content: '6030 ₽';
+    }
+    
+    &_5:after {
+      content: '890 ₽';
+    }
+  }
+
+  &__price::after {
+    position: absolute;
+    
+    width: 64px;
+    height: 24px;
+    left: 117px;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: line-through;
+
+    @media(max-width: 780px) {
+      left: 90px;
+      font-size: 16px;
+    }
+
+    @media(max-width: 480px) {
+      font-size: 12px;
+      left: 65px;
+    }
+  }
+
+  
+  &__text {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 150%;
+
+    @media(max-width: 780px) {
+      font-size: 18px;
+    }
+  }
+}
+
+.page{
+  &-sale {
+    color: $color-primary;
+    padding-top: 50px;
+
+    @media(max-width: 480px) {
+      padding-top: 25px;
+    }
+
+
+    &__title{
+      font-size: 50px;
+      font-weight: 700;
+      line-height: 130%; /* 65px */
+      margin-bottom: 30px;
+
+      @media(max-width: 1280px) {
+        font-size: 30px;
+      }
+  
+      @media(max-width: 480px) {
+        font-size: 20px;
+      }
+    }
+
+    &__list {
+      display: flex;
+      gap: 30px;
+
+      @media(max-width: 1280px) {
+        display: none;
+      }
+
+    }
+  }
+
+  &-card {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 25%;
+    position: relative;
+
+    &::before{
+      position: absolute;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 130%;
+      text-align: center;
+      color: #fff;
+      top: 110px;
+      left: 20px;
+      width: 88px;
+      height: 88px;
+      background-color: #ffbd13;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &_4::before{
+      content: "-10%";
+    }
+
+
+
+    &__text {
+      font-size: 22px;
+      line-height: 150%;
+    }
+
+    &__price {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+
+
+
+

@@ -1,0 +1,124 @@
+.basket {
+  color: $color-primary;
+}
+
+.cart {
+
+  &__title {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 130%;
+    margin-bottom: 20px;
+  }
+
+  &__del-add-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #E8E8E8;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+
+  &__del {
+    border: none;
+    background-color: transparent;
+
+    background-image: url('../img/sprite.svg#delete');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+  }
+
+  &__item {
+    position: relative;
+
+    &:not(:last-of-type) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__input_item {
+    // margin-right: 23px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+  }
+
+  &__label_all {
+    // margin-right: auto;
+  }
+
+  &__item_1{
+    padding-left: 40px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid red;
+  }
+
+  &__common-info-wrap {
+    display: flex;
+  }
+
+  &__image-wrap {
+    // width: 130px;
+    // height: 130px;
+    border-radius: 10px;
+    border: 1px solid #E8E8E8;
+    margin-right: 12px;
+  }
+
+  &__image {
+    object-fit: contain;
+    object-position: center;
+    width: 130px;
+    height: 130px;
+  }
+
+  &__description-title,
+  &__count {
+    font-size: 22px;
+    line-height: 150%; /* 33px */
+    margin-bottom: 8px;
+  }
+
+  &__description {
+    color: $color-thirdy;
+  }
+
+  &__counter-btn {
+    width: 36px;
+    height: 36px;
+    border: solid #E8E8E8 1px;
+    border-radius: 50%;
+    background-color: transparent;
+    color: $color-thirdy;
+
+    // &_prev {
+
+    // }
+  }
+
+  &__price-wrap {
+    text-align: right;
+  }
+
+  &__price-current {
+    font-size: 26px;
+    font-weight: 700;
+  }
+
+  &__price-not-sale {
+    color: $color-thirdy;
+    font-size: 18px;
+    text-decoration:line-through;
+  }
+
+  &__price-bank {
+    color: $color-secondary;
+    line-height: 130%; /* 20.8px */
+  }
+}

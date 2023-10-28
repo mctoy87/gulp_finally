@@ -7,18 +7,9 @@
     <link rel="preload" href="fonts/lato-regular.woff2" as="font" type="font/woff2" crossorigin> <!--Добавил предзагрузку шрифтов-->
     <link rel="preload" href="fonts/lato-bold.woff2" as="font" type="font/woff2" crossorigin>
     
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const createLink = url => {
-          const link = document.createElement('link');
-          link.rel = 'stylesheet';
-          link.href = url;
-          document.head.append(link);
-        };
-        createLink('css/index.min.css');
-      })
-    </script>
+    <link rel="stylesheet" href="css/index.min.css">
     <script type="module" src="js/index.min.js"></script>
+
     <title>Онлайн магазин ShopOnline</title>
 </head>
   
@@ -28,7 +19,7 @@
   <header class="header">
     <div class="container header__container">
       <h1 class="header__title visually-hidden">Главная страница онлайн магазина ShopOnline</h1>
-      <img class="header__logo" src="./img/logo.png" alt="Логотип онлайн магазина" width="190" height="41" loading="lazy">
+      <img class="header__logo" src="img/logo.png" alt="Логотип онлайн магазина">
       <button class="header__menu btn" aria-haspopup="true" aria-expanded="false">
         <span class="header__menu-text">Меню</span>
       </button>
@@ -54,14 +45,12 @@
                 <p class="header__item-text">Профиль</p>
               </li>
               <li class="header__item" tabindex="0">
-                <a class="header__link" href="cart.html">
-                  <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.5 27C8.85 27 7.515 28.35 7.515 30C7.515 31.65 8.85 33 10.5 33C12.15 33 13.5 31.65 13.5 30C13.5 28.35 12.15 27 10.5 27ZM1.5 3V6H4.5L9.9 17.385L7.875 21.06C7.635 21.48 7.5 21.975 7.5 22.5C7.5 24.15 8.85 25.5 10.5 25.5H28.5V22.5H11.13C10.92 22.5 10.755 22.335 10.755 22.125L10.8 21.945L12.15 19.5H23.325C24.45 19.5 25.44 18.885 25.95 17.955L31.32 8.22C31.44 8.01 31.5 7.755 31.5 7.5C31.5 6.675 30.825 6 30 6H7.815L6.405 3H1.5ZM25.5 27C23.85 27 22.515 28.35 22.515 30C22.515 31.65 23.85 33 25.5 33C27.15 33 28.5 31.65 28.5 30C28.5 28.35 27.15 27 25.5 27Z" fill="#2D2D2D"/>
-                    <circle cx="29" cy="7" r="7" fill="white"/>
-                    <path d="M31.867 10.39C32.0537 10.39 32.2007 10.4437 32.308 10.551C32.42 10.6537 32.476 10.7913 32.476 10.964V12H25.532V11.426C25.532 11.3093 25.5553 11.188 25.602 11.062C25.6533 10.9313 25.7327 10.8147 25.84 10.712L28.913 7.632C29.1697 7.37067 29.3983 7.121 29.599 6.883C29.8043 6.645 29.9747 6.40933 30.11 6.176C30.2453 5.94267 30.348 5.707 30.418 5.469C30.4927 5.22633 30.53 4.972 30.53 4.706C30.53 4.46333 30.495 4.251 30.425 4.069C30.355 3.88233 30.2547 3.726 30.124 3.6C29.998 3.474 29.844 3.38067 29.662 3.32C29.4847 3.25467 29.284 3.222 29.06 3.222C28.8547 3.222 28.6633 3.25233 28.486 3.313C28.3133 3.369 28.1593 3.45067 28.024 3.558C27.8887 3.66067 27.7743 3.782 27.681 3.922C27.5877 4.062 27.5177 4.216 27.471 4.384C27.3917 4.59867 27.289 4.741 27.163 4.811C27.037 4.881 26.855 4.89733 26.617 4.86L25.707 4.699C25.777 4.21367 25.9123 3.789 26.113 3.425C26.3137 3.05633 26.5633 2.75067 26.862 2.508C27.1653 2.26067 27.5107 2.07633 27.898 1.955C28.29 1.829 28.71 1.766 29.158 1.766C29.6247 1.766 30.0517 1.836 30.439 1.976C30.8263 2.11133 31.1577 2.305 31.433 2.557C31.7083 2.809 31.923 3.11233 32.077 3.467C32.231 3.82167 32.308 4.216 32.308 4.65C32.308 5.02333 32.252 5.36867 32.14 5.686C32.0327 6.00333 31.8857 6.30667 31.699 6.596C31.517 6.88533 31.3023 7.16533 31.055 7.436C30.8077 7.70667 30.5487 7.982 30.278 8.262L27.996 10.593C28.2153 10.5277 28.4323 10.4787 28.647 10.446C28.8663 10.4087 29.074 10.39 29.27 10.39H31.867Z" fill="#3670C7"/>
-                  </svg>
-                  <p class="header__item-text">Корзина</p>
-                </a>
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10.5 27C8.85 27 7.515 28.35 7.515 30C7.515 31.65 8.85 33 10.5 33C12.15 33 13.5 31.65 13.5 30C13.5 28.35 12.15 27 10.5 27ZM1.5 3V6H4.5L9.9 17.385L7.875 21.06C7.635 21.48 7.5 21.975 7.5 22.5C7.5 24.15 8.85 25.5 10.5 25.5H28.5V22.5H11.13C10.92 22.5 10.755 22.335 10.755 22.125L10.8 21.945L12.15 19.5H23.325C24.45 19.5 25.44 18.885 25.95 17.955L31.32 8.22C31.44 8.01 31.5 7.755 31.5 7.5C31.5 6.675 30.825 6 30 6H7.815L6.405 3H1.5ZM25.5 27C23.85 27 22.515 28.35 22.515 30C22.515 31.65 23.85 33 25.5 33C27.15 33 28.5 31.65 28.5 30C28.5 28.35 27.15 27 25.5 27Z" fill="#2D2D2D"/>
+                  <circle cx="29" cy="7" r="7" fill="white"/>
+                  <path d="M31.867 10.39C32.0537 10.39 32.2007 10.4437 32.308 10.551C32.42 10.6537 32.476 10.7913 32.476 10.964V12H25.532V11.426C25.532 11.3093 25.5553 11.188 25.602 11.062C25.6533 10.9313 25.7327 10.8147 25.84 10.712L28.913 7.632C29.1697 7.37067 29.3983 7.121 29.599 6.883C29.8043 6.645 29.9747 6.40933 30.11 6.176C30.2453 5.94267 30.348 5.707 30.418 5.469C30.4927 5.22633 30.53 4.972 30.53 4.706C30.53 4.46333 30.495 4.251 30.425 4.069C30.355 3.88233 30.2547 3.726 30.124 3.6C29.998 3.474 29.844 3.38067 29.662 3.32C29.4847 3.25467 29.284 3.222 29.06 3.222C28.8547 3.222 28.6633 3.25233 28.486 3.313C28.3133 3.369 28.1593 3.45067 28.024 3.558C27.8887 3.66067 27.7743 3.782 27.681 3.922C27.5877 4.062 27.5177 4.216 27.471 4.384C27.3917 4.59867 27.289 4.741 27.163 4.811C27.037 4.881 26.855 4.89733 26.617 4.86L25.707 4.699C25.777 4.21367 25.9123 3.789 26.113 3.425C26.3137 3.05633 26.5633 2.75067 26.862 2.508C27.1653 2.26067 27.5107 2.07633 27.898 1.955C28.29 1.829 28.71 1.766 29.158 1.766C29.6247 1.766 30.0517 1.836 30.439 1.976C30.8263 2.11133 31.1577 2.305 31.433 2.557C31.7083 2.809 31.923 3.11233 32.077 3.467C32.231 3.82167 32.308 4.216 32.308 4.65C32.308 5.02333 32.252 5.36867 32.14 5.686C32.0327 6.00333 31.8857 6.30667 31.699 6.596C31.517 6.88533 31.3023 7.16533 31.055 7.436C30.8077 7.70667 30.5487 7.982 30.278 8.262L27.996 10.593C28.2153 10.5277 28.4323 10.4787 28.647 10.446C28.8663 10.4087 29.074 10.39 29.27 10.39H31.867Z" fill="#3670C7"/>
+                </svg>
+                <p class="header__item-text">Корзина</p>
               </li>
               <li class="header__item" tabindex="0">
                 <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -127,84 +116,102 @@
     </div>
   </div>
 
-  <section class="hero">
-    <div class="container hero__container">
-      <div class="hero__wrap" tabindex="0">
-        <h2 class="hero__title visually-hidden">Действующая промо-акция магазина</h2>
-        <p class="hero__promo-text">-50% на все ноутбуки</p>
-        <p class="hero__promo-time-end">До конца акции:</p>
-        <div class="hero__promo-timer timer" data-deadline="2023/10/25 13:36">
-          <p class="hero__promo-time timer-day-txt"><span class="hero__promo-number timer-day">3</span> Дней</p>
-          <p class="hero__promo-time timer-hour-txt"><span class="hero__promo-number timer-hour">8</span> Часов</p>
-          <p class="hero__promo-time timer-min-txt"><span class="hero__promo-number timer-min">43</span> Минут</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
 <main>
-  <section class="goods">
+  <section class="basket">
     <div class="container">
-      <h2 class="goods__title visually-hidden">Товары и промоакции интеренет-магазина</h2>
-      <ul class="goods__list" aria-label="Посмотреть все предложения интернета магазина">
-        <li class="goods__item goods__item_1" aria-label="Товары раздела 'Книги'">
-          <a class = "goods__link goods__link_1" href="#" aria-label="Перейти к товарам раздела 'Книги'">
-            <p class="goods__text goods__text_fz30 goods__text_bottom-20px">Книга – <br> <span class="goods__text-span">лучший подарок</span></p>
-          </a>
+      <h1 class="basket__title visually-hidden">Продуктовая корзина для покупки и управления товарами</h1>
+      
+      <ul class="basket__breadcrumb breadcrumb">
+        <li class="breadcrumb__item">
+          <a class="breadcrumb__link" href="./index.html">Главная</a>
         </li>
-        <li class="goods__item goods__item_2" aria-label="Товары со скидкой">
-          <a class = "goods__link goods__link_2" href="#" aria-label="Перейти к товарам со скидкой">
-            <p class="goods__text goods__text_fz30">Время скидок!</p>
-          </a>
+        <li class="breadcrumb__item">
+          <a class="breadcrumb__link" href="#">Корзина</a>
         </li>
-        <li class="goods__item goods__item_3" aria-label="Товары раздела 'Обувь'">
-          <a class = "goods__link goods__link_3" href="#" aria-label="Перейти к товарам раздела 'Обувь'"></a>
-        </li>
-        <li class="goods__item goods__item_4" aria-label="Товары раздела 'Обувь', участвующих в акции 'Вторая обувь в подарок'">
-          <a class = "goods__link goods__link_4" href="#" aria-label="Перейти к товарам раздела 'Обувь', участвующих в акции">
-            <div class="goods__text-wrapper">
-              <p class="goods__text goods__text_blue">
-                Вторая пара кроссовок <span class="goods__text-span goods__text-span_bold-blue">в подарок!</span>
-              </p>
-            </div>
-          </a>
-        </li>
-
-        <li class="goods__item goods__item_5" aria-label="Товары раздела 'Новогодние подарки'">
-          <a class = "goods__link goods__link_5" href="#" aria-label="Перейти к товарам раздела 'Новогодние подарки'">
-            <p class="goods__text goods__text_bottom-30px">Идеи новогодних подарков</p>
-          </a>
-        </li>
-
-        <li class="goods__item goods__item_6" aria-label="Сезонные скидки на товары">
-          <a class = "goods__link goods__link_6" href="#" aria-label="Перейти к сезонным скидкам на товары">
-            <p class="goods__text goods__text_bottom-30px">Выгодно в декабре!</p>
-          </a>
-        </li>
-        <li class="goods__item goods__item_7" aria-label="Новогодние украшения">
-          <a class = "goods__link goods__link_7" href="#" aria-label="Перейти к товарам 'Новогодние украшения'">
-            <div class="goods__text-wrap">
-              <p class="goods__text goods__text_red">Новогодние украшения</p>
-            </div>
-          </a>
-        </li>
-        <li class="goods__item goods__item_8" aria-label="Товары раздела 'Одежда'">
-          <a class = "goods__link goods__link_8" href="#" aria-label="Перейти к товарам раздела 'Одежда'"></a>
-        </li>
-
-          <li class="goods__item goods__item_9" aria-label="Товары раздела 'Бытовая химия'">
-            <a class = "goods__link goods__link_9" href="#" aria-label="Перейти к товарам раздела 'Бытовая химия'">
-              <p class="goods__text goods__text_fz30 goods__text_bottom-20px">На бытовую химию</p>
-            </a>
-          </li>
-          <li class="goods__item goods__item_10" aria-label="Товары к новому году">
-            <a class = "goods__link goods__link_10" href="#" aria-label="Перейти к товарам к новому году"></a>
-          </li>
-
       </ul>
+
+      <form class="basket__form" action="" name="basket">
+        <fieldset class="basket__cart-wrapper cart">
+          <legend class="cart__legend visually-hidden">Корзина</legend>
+          <h2 class="cart__title">Корзина</h2>
+
+          <div class="cart__del-add-wrap">
+            <label class="cart__label cart__label_all">
+              <input class="cart__input cart__input_all" type="checkbox" name="userGoods" value="all">
+              Выбрать все
+            </label>
+
+            <button class="cart__del"></button>            
+          </div>
+
+
+          <ul class="cart__list">
+            <li class="cart__item cart__item_1">
+              <label class="cart__label visually-hidden" for="cartGood-1">Выбрать этот товар</label>
+              <input class="cart__input cart__input_item" id="cartGood-1" type="checkbox" name="userGoods" value="1">
+              <div class="cart__common-info-wrap">
+                <div class="cart__image-wrap">
+                  <img class="cart__image" src="./img/pc-1.png" alt="Игровой ноутбук ASUS G513IE-HN004T">
+                </div>
+                <div class="cart__description-wrap">
+                  <p class="cart__description-title">15.6" Игровой ноутбук ASUS G513IE-HN004T</p>
+                  <p class="cart__description">Цвет: черный</p>
+                  <p class="cart__description">Оперативная память: 16 ГБ</p>
+                </div>              
+              </div>
+
+              <div class="cart__counter-wrap">
+                <button class="cart__counter-btn cart__counter-btn_prev">−</button>
+                <span class="cart__count">1</span>
+                <button class="cart__counter-btn cart__counter-btn_next">+</button>
+              </div>
+              <div class="cart__price-wrap">
+                <p class="cart__price-current">109 090 ₽</p>
+                <p class="cart__price-not-sale">140 590 ₽</p>
+                <a class="cart__price-bank" href="">В кредит от 5600 ₽</a>
+              </div>
+            </li>
+
+
+            <li class="cart__item cart__item_1">
+              <label class="cart__label visually-hidden" for="cartGood-2">Выбрать этот товар</label>
+              <input class="cart__input cart__input_item" id="cartGood-2" type="checkbox" name="userGoods" value="2">
+              <div class="cart__common-info-wrap">
+                <div class="cart__image-wrap">
+                  <img class="cart__image" src="./img/pc-1.png" alt="Игровой ноутбук ASUS G513IE-HN004T">
+                </div>
+                <div class="cart__description-wrap">
+                  <p class="cart__description-title">15.6" Игровой ноутбук ASUS G513IE-HN004T</p>
+                  <p class="cart__description">Цвет: черный</p>
+                  <p class="cart__description">Оперативная память: 16 ГБ</p>
+                </div>              
+              </div>
+
+              <div class="cart__counter-wrap">
+                <button class="cart__counter-btn cart__counter-btn_prev">−</button>
+                <span class="cart__count">1</span>
+                <button class="cart__counter-btn cart__counter-btn_next">+</button>
+              </div>
+              <div class="cart__price-wrap">
+                <p class="cart__price-current">109 090 ₽</p>
+                <p class="cart__price-not-sale">140 590 ₽</p>
+                <a class="cart__price-bank" href="">В кредит от 5600 ₽</a>
+              </div>
+            </li>
+            
+          </ul>
+
+
+        </fieldset>
+        <fieldset class="basket__dekivery-wrapper">
+          <legend class="basket__dekivery-title">Способ доставки</legend>
+          <label class=""></label>
+        </fieldset>
+        <fieldset class="basket__price-wrapper"></fieldset>
+      </form>
+
     </div>
   </section>
-
   <section class="sale">
     <div class="container">
       <h2 class="sale__title">Это выгодно!</h2>
@@ -306,20 +313,20 @@
   <div class="container footer__container">
     <h2 class="footer__title visually-hidden">Подвал сайта интернет-магазина</h2>
     
-    <div class="footer__container-wrap container-wrap">
+    <div class="footer__container-wrap">
       <div class="footer__logo-wrap">
-        <img class="footer__logo" src="img/logo-footer.png" alt="Логотип онлайн магазина" width="190" height="41" loading="lazy">
+        <img class="footer__logo" src="img/logo-footer.png" alt="Логотип онлайн магазина">
       </div>
 
-      <div class="footer__catalog-wrap catalog-wrap">
-        <h3 class="footer__catalog-title footer-paragrath catalog-title" tabindex="0">Каталог</h3>
+      <div class="footer__catalog-wrap">
+        <h3 class="footer__catalog-title footer-paragrath" tabindex="0">Каталог</h3>
         <ul class="footer__catalog catalog" id="footer-catalog">
           <li class="catalog__item">
             <a href="#" aria-label="Смартфоны">Смартфоны</a></li>
           <li class="catalog__item">
             <a href="#" aria-label="Бытовая химия">Бытовая химия</a></li>
           <li class="catalog__item">
-            <a href="./page.html" aria-label="Ноутбуки">Ноутбуки</a></li>
+            <a href="#" aria-label="Ноутбуки">Ноутбуки</a></li>
           <li class="catalog__item">
             <a href="#" aria-label="Книги и журнал">Книги и журналы</a></li>
           <li class="catalog__item">
@@ -337,8 +344,8 @@
         </ul>
       </div>
 
-      <div class="footer__byer-info-wrap byer-info-wrap">
-        <h3 class="footer__byer-info-title footer-paragrath catalog-title" tabindex="0">Покупателям</h3>
+      <div class="footer__byer-info-wrap">
+        <h3 class="footer__byer-info-title footer-paragrath" tabindex="0">Покупателям</h3>
         <ul class="footer__byer-info byer-info">
           <li class="byer-info__item">
             <a href="#" aria-label="Оплата заказа">Оплата заказа</a></li>
@@ -351,8 +358,8 @@
         </ul>
       </div>
 
-      <div class="footer__contacts-wrap contacts-wrap">
-        <h3 class="footer__contacts-title footer-paragrath catalog-title" tabindex="0">Контакты</h3>
+      <div class="footer__contacts-wrap">
+        <h3 class="footer__contacts-title footer-paragrath" tabindex="0">Контакты</h3>
         <a class="footer__contacts-tel text-small" href="tel:+79378392361">Тел: +7 937 839 23-61</a> 
         <a class="footer__contacts-mail text-small" href="mailto:OnlineShop@gmail.com">Email: OnlineShop@gmail.com</a>
   

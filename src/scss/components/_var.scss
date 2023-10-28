@@ -1,0 +1,42 @@
+$color-primary: #2D2D2D;
+$color-secondary: #3670C7;
+$color-thirdy: #8F8F8F;
+$color-fourth: #EFEFEF;
+$color-fifth: #FFFFFF;
+$color-sixth: #FF0000;
+
+$text-color: #FFFFFF;
+
+$fonts: Lato;
+
+%imgProperty {
+  background: {
+    repeat: no-repeat;
+    position: center;
+    size: contain;
+  }
+}
+
+%discountLabel {
+  position: absolute;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 130%;
+  text-align: center;
+  background-color: #FFBD13;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin font($name, $weight, $weightName) {
+  font: {
+    family: $name;
+    weight: $weight;
+    style: normal;
+    display: swap;
+  }
+  src: url('../fonts/lato-#{ $weightName }.woff2') format('woff2'),
+    url('../fonts/lato-#{ $weightName }.woff') format('woff');
+}
