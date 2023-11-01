@@ -203,11 +203,70 @@
 
 
         </fieldset>
-        <fieldset class="basket__delivery-wrapper">
-          <legend class="basket__delivery-title cart__title">Способ доставки</legend>
-          <label class=""></label>
+        <fieldset class="basket__delivery-wrapper delivery">
+          <legend class="delivery-legend visually-hidden">Способ доставки</legend>
+          <div class="delivery__title-wrap">
+            <h2 class="delivery-title cart__title">Способ доставки</h2>
+            <button class="delivery__btn">Изменить</button>            
+          </div>
+
+          <ul class="delivery-list">
+            <li class="delivery__item delivery__item_mb-15">
+              <p class="delivery__point">Пункт выдачи</p>
+              <p class="delivery__description">г. Москва (Московская область), улица Павлика Морозова, д. 48, (Пункт выдачи), Ежедневно 10:00-21:00</p>
+            </li>
+            <li class="delivery__item delivery__item_mb-30">
+              <p class="delivery__point">Стоимость доставки</p>
+              <p class="delivery__description">Бесплатно</p>
+            </li>
+            <li class="delivery__item">
+              <p class="delivery__point delivery__point_bold">10-13 февраля</p>
+              <div class="delivery__preview-wrap">
+                <div class="delivery__preview delivery__preview_1">
+                </div>
+                <div class="delivery__preview delivery__preview_2">
+                </div>
+              </div>
+            </li>
+          </ul>
+
         </fieldset>
-        <fieldset class="basket__price-wrapper"></fieldset>
+        <fieldset class="basket__check-wrapper check">
+          <legend class="check-legend visually-hidden">Итог</legend>
+          <div class="check__total-wrap">
+            <p class="check__total-text">Итого:</p>
+            <p class="check__total-text">112 992 ₽</p>
+          </div>
+          <ul class="check__list">
+            <li class="check__item">
+              <p class="check__point">Товары, 2  шт.</p>
+              <p class="check__description">145 080 ₽</p>
+            </li>
+            <li class="check__item">
+              <p class="check__point">Скидка</p>
+              <p class="check__description">32 088 ₽</p>
+            </li>
+            <li class="check__item">
+              <p class="check__point">Доставка</p>
+              <p class="check__description">Бесплатно</p>
+            </li>
+          </ul>
+          <div class="check__info-wrap">
+            <p class="check__info check__info_bold check__info_mb-10">Доставка: <span class="check__info_blue">Пункт выдачи</span></p>
+            <p class="check__info">Ежедневно 10:00 - 21:00</p>
+            <p class="check__info">г. Москва (Московская область), улица Павлика Морозова, д. 48</p>
+          </div>
+
+          <p class="check__info check__info_bold">Дата: <span class="check__info_blue">10-13 февраля</span></p>
+          <p class="check__info check__info_bold">Оплата: <span class="check__info_blue">Картой</span></p>
+
+          <button class="check__btn">Заказать</button>
+          
+          <label class="check__personalData-label" for="agreePersonalData">
+            <input class="check__personalData-input" id ="agreePersonalData" type="checkbox" name="agreePersonalData">
+            Согласен <a href="#">с условиями правил</a> пользования торговой площадкой и правилами возврата
+          </label>
+        </fieldset>
       </form>
 
     </div>
