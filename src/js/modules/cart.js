@@ -2,6 +2,7 @@ const counterText = document.querySelector('.cart__count');
 const counterBtn = document.querySelectorAll('.cart__counter-btn');
 const checkbox = document.querySelectorAll('.cart__input_item');
 const checkboxAll = document.querySelector('.cart__input_all');
+const openCart = document.querySelector('.page-hero__btn-add');
 
 let counter = 1;
 let checked = false;
@@ -37,5 +38,18 @@ checkboxAll.addEventListener('click', () => {
     checkbox.forEach(el => el.checked = false);
   }
 });
+
+
+const cart = {
+  obj: {
+    name: 'aaa',
+    description: {
+      color: 'black',
+      RAM: 16,
+    },
+    count: 4,
+    price: 109090,
+  },
+};
 
 
