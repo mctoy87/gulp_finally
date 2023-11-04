@@ -211,11 +211,11 @@
     background-size: contain;
 
     &_1 {
-      background-image: url('../img/pc-1.png');
+      // background-image: url('../img/pc-1.png');
     }
 
     &_2 {
-      background-image: url('../img/bed_sale.jpg');
+      // background-image: url('../img/bed_sale.jpg');
     }
   }
 }
@@ -248,7 +248,8 @@
     display: flex;
     justify-content: space-between;
   }
-  &__total-text {
+  &__total-text,
+  &__total-price {
     font-size: 26px;
     font-weight: 700;
   }
