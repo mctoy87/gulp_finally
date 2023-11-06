@@ -77,7 +77,6 @@ if (item_01) {
       type="checkbox" 
       name="userGoods" 
       value="1">
-    <div class="cart__common-info-wrap">
       <div class="cart__image-wrap">
         <img 
           class="cart__image" 
@@ -91,7 +90,6 @@ if (item_01) {
         <p class="cart__description">Цвет: черный</p>
         <p class="cart__description">Оперативная память: 16 ГБ</p>
       </div>              
-    </div>
     
     <div class="cart__counter-wrap">
       <button 
@@ -114,6 +112,7 @@ if (item_01) {
       <p class="cart__price-not-sale">${item_01.firstPrice}</p>
       <a class="cart__price-bank" href="">В кредит от 5600 ₽</a>
     </div>
+    <button class="cart__del cart__del_display-none" type="button"></button>  
     </li>
   `;
 
@@ -199,30 +198,32 @@ checkboxAll?.addEventListener('click', () => {
 });
 
 // получим кнопку Удалить со страницы
-const deleteBtn = document.querySelector('.cart__del');
+const deleteBtn = document.querySelectorAll('.cart__del');
 // слушаем клик по кнопке удалить из корзины
 if (deleteBtn) {
-  deleteBtn.addEventListener('click', () => {
+  deleteBtn.forEach(el => {
+    el.addEventListener('click', () => {
     // перебираем все чекбоксы
-    checkbox.forEach(el => {
+      checkbox.forEach(el => {
       // если чекбокс нажат, то
-      if (el.checked === true) {
+        if (el.checked === true) {
         // получим item с карточки ДОСТАВКА в корзине
-        const deliveryImg = document.querySelector('.delivery__preview');
-        // если дата атрибут item совпадает с id из Storage то удаляем карточку
-        if (deliveryImg.dataset.id === `${item_01.id}`) deliveryImg.remove();
+          const deliveryImg = document.querySelector('.delivery__preview');
+          // если дата атрибут item совпадает с id из Storage то удаляем карточку
+          if (deliveryImg.dataset.id === `${item_01.id}`) deliveryImg.remove();
 
-        // удаляем из storage объект по его id
-        localStorage.removeItem(`id_${el.closest('.cart__item ').dataset.id}`);
-        // удаляем объект из верстки корзины
-        el.closest('.cart__item ').remove();
+          // удаляем из storage объект по его id
+          localStorage.removeItem(`id_${el.closest('.cart__item ').dataset.id}`);
+          // удаляем объект из верстки корзины
+          el.closest('.cart__item ').remove();
 
 
-        // пересчет общей стоимости товаров в корзине
-        calcCartPrice();
-      }
+          // пересчет общей стоимости товаров в корзине
+          calcCartPrice();
+        }
+      });
     });
-  });
+  })
 }
 
 

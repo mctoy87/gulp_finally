@@ -2,15 +2,46 @@
   color: $color-primary;
   margin-bottom: 150px;
 
+  @media(max-width:1024px) {
+    margin-bottom: 100px;
+  }
+
+  @media(max-width:780px) {
+    margin-bottom: 50px;
+  }
+
   &__title {
     font-size: 50px;
     line-height: 130%; /* 65px */
     margin-bottom: 40px;
+
+    @media(max-width:1024px) {
+      font-size: 40px;
+      margin-bottom: 30px;
+    }
+    @media(max-width:1024px) {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    @media(max-width:480px) {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
   }
 
   &__article__text {
     font-size: 22px;
     line-height: 150%; /* 33px */
+
+    @media(max-width:1024px) {
+      font-size: 18px;
+    }
+    @media(max-width:780px) {
+      font-size: 16px;
+    }
+    @media(max-width:480px) {
+      font-size: 12px;
+    }
 
     &_mb150 {
       margin-bottom: 150px;
@@ -20,16 +51,40 @@
   &__wrapper {
     display: grid;
     justify-content: space-between;
-    gap: 50px 173px;
-    grid-template-rows: repeat(2, minmax(328px, 1fr));
-    grid-template-columns: 2fr 532px;
+    gap: 50px 10px;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 2fr 1fr;
     grid-template-areas: 
       "text promoFirst"
       "text promoSecond";
+
+      @media(max-width:768px) {
+        grid-template-rows: repeat(2, auto);
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+          "text text"
+          "promoFirst promoSecond";
+      }
+
+      @media(max-width:480px) {
+        display: block;
+      }
+
+  }
+
+  &__wrapper-main {
+
   }
   
   &__wrapper-text {
     grid-area: text;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    @media(max-width:780px) {
+      gap: 120px;
+    }
   }
   
   &__naw-wrap {
@@ -43,7 +98,7 @@
     font-weight: 700;
     line-height: 130%; /* 20.8px */
     padding-left: 34px;
-    &__:before {
+    &:before {
       position: absolute;
       content: url(../img/sprite.svg#keyboard_backspace);
       height: 24px;
@@ -51,21 +106,54 @@
       top: 0;
       left: 0;
     }
+
+    @media(max-width:1024px) {
+      font-size: 14px;
+    }
+
+    @media(max-width:480px) {
+      font-size: 10px;
+    }
   }
   
   &__autor {
     color: #000000;
     font-size: 22px;
     line-height: 150%; /* 33px */
+
+    @media(max-width:1024px) {
+      font-size: 18px;
+    }
+
+    @media(max-width:480px) {
+      font-size: 12px;
+    }
   }
   
   &__promo {
     position: relative;
     background: {
       repeat: no-repeat;
-      position: right;
-      size: contain;
+      position: center;
+      size: cover;
     }
+    min-height: 328px;
+    min-width: 532px;
+
+    @media(max-width:1024px) {
+      min-height: 254px;
+      min-width: 300px;
+    }
+
+    @media(max-width:768px) {
+      min-height: auto;
+      min-width: auto;
+    }
+
+    @media(max-width:480px) {
+      display: none;
+    }
+    
   }
   
   &__promo-1 {
@@ -80,7 +168,7 @@
 
   &__promo-title, 
   &__promo-text {
-  position: absolute;
+
   max-width: 380px;
   color: $text-color;
   font-weight: 700;
@@ -88,19 +176,28 @@
 }
 
   &__promo-title {
-    top: 176px;
-    left: 30px;
     font-size: 32px;
+
+    @media(max-width:1024px) {
+      font-size: 22px;
+    }
   }
 
   &__promo-text {
-    bottom: 43px;
-    left: 30px;
     font-size: 16px;
+
+    @media(max-width:1024px) {
+      font-size: 14px;
+    }
   }
 
   &__promo-link {
     display: block;
     height: 100%;
+    padding: 176px 0 10px 30px;
+
+    @media(max-width:1024px) {
+      padding: 150px 0 10px 20px
+    }
   }
 }

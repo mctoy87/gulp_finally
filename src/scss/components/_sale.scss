@@ -7,6 +7,14 @@
     font-size: 50px;
     line-height: 130%; /* 65px */
     margin-bottom: 50px;
+
+    @media(max-width:1024px) {
+      font-size: 30px;
+    }
+
+    @media(max-width:480px) {
+      font-size: 20px;
+    }
   }
   
   &__list {
@@ -27,6 +35,7 @@
 
     @media(max-width: 480px) {
       gap: 30px 10px;
+      justify-content: space-between;
     }
 
     // для page-list - дубликат блока
@@ -192,6 +201,10 @@
 
     @media(max-width: 780px) {
       font-size: 18px;
+    }
+
+    @media(max-width:480px) {
+      font-size: 12px;
     }
   }
 }

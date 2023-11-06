@@ -141,7 +141,7 @@
               Выбрать все
             </label>
 
-            <button class="cart__del" type="button"></button>            
+            <button class="cart__del cart__del_main" type="button"></button>            
           </div>
 
 
@@ -204,9 +204,9 @@
 
         </fieldset>
         <fieldset class="basket__delivery-wrapper delivery">
-          <legend class="delivery-legend visually-hidden">Способ доставки</legend>
+          <legend class="delivery__legend visually-hidden">Способ доставки</legend>
           <div class="delivery__title-wrap">
-            <h2 class="delivery-title cart__title">Способ доставки</h2>
+            <h2 class="delivery__title cart__title">Способ доставки</h2>
             <button class="delivery__btn">Изменить</button>            
           </div>
 
@@ -217,7 +217,7 @@
             </li>
             <li class="delivery__item delivery__item_mb-30">
               <p class="delivery__point">Стоимость доставки</p>
-              <p class="delivery__description">Бесплатно</p>
+              <p class="delivery__description delivery__description_border">Бесплатно</p>
             </li>
             <li class="delivery__item">
               <p class="delivery__point delivery__point_bold">10-13 февраля</p>
@@ -252,13 +252,21 @@
             </li>
           </ul>
           <div class="check__info-wrap">
-            <p class="check__info check__info_bold check__info_mb-10">Доставка: <span class="check__info_blue">Пункт выдачи</span></p>
+            <div class="check__info-wrapper">
+              <p class="check__info check__info_bold check__info_mb-10">Доставка:</p>
+              <span class="check__info_blue">Пункт выдачи</span>
+            </div>
             <p class="check__info">Ежедневно 10:00 - 21:00</p>
             <p class="check__info">г. Москва (Московская область), улица Павлика Морозова, д. 48</p>
           </div>
-
-          <p class="check__info check__info_bold">Дата: <span class="check__info_blue">10-13 февраля</span></p>
-          <p class="check__info check__info_bold">Оплата: <span class="check__info_blue">Картой</span></p>
+          <div class="check__info-wrapper">
+            <p class="check__info check__info_bold">Дата: </p>
+            <span class="check__info_blue">10-13 февраля</span>
+          </div>
+          <div class="check__info-wrapper">
+            <p class="check__info check__info_bold">Оплата: </p>
+            <span class="check__info_blue">Картой</span>
+          </div>
 
           <button class="check__btn">Заказать</button>
           

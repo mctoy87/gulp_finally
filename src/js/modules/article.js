@@ -18,8 +18,10 @@ const createPostPage = async () => {
 
   /* Рендер конкретного поста */
   postContent = `
+      <div class="article__wrapper-main">
         <h2 class="article__title">${post.title}</h2>
         <p class="article__text article__text_mb150">${post.body}</p>
+      </div>
         <div class="article__naw-wrap">
           <a class="article__back-link" href="/blog.html">К списку статей</a>
           <p class="article__autor">
